@@ -1,0 +1,13 @@
+{
+  "id": "dankObsidian",
+  "name": "Obsidian Launcher",
+  "description": "Quick access to your Obsidian vaults",
+  "version": "1.0.0",
+  "author": "Samoggino",
+  "icon": "stylus_note",
+  "type": "launcher",
+  "trigger": "ob",
+  "component": "./DankObsidian.qml",
+  "settings" : "./DankObsidianSettings.qml",
+  "permissions": ["settings_read", "settings_write"]
+}
