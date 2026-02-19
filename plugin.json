@@ -1,0 +1,15 @@
+{
+  "id": "dankObsidian",
+  "name": "Dank Obsidian",
+  "description": "Quick access to your Obsidian vaults",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Samoggino",
+  "icon": "stylus_note",
+  "type": "launcher",
+  "component": "./DankObsidian.qml",
+  "settings" : "./DankObsidianSettings.qml",
+  "requires_dms": ">=1.4.0",
+  "permissions": ["settings_read", "settings_write"],
+  "trigger": "\\obs"
+}
