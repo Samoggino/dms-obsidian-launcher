@@ -34,7 +34,7 @@ PluginSettings {
             if (value) {
                 root.saveValue("trigger", ""); // Disable trigger if active
             } else {
-                root.saveValue("trigger", triggerSetting.value || "obs"); // Restore StringSetting value
+                root.saveValue("trigger", triggerSetting.value || "\obs"); // Restore StringSetting value
             }
         }
     }
@@ -44,7 +44,7 @@ PluginSettings {
         visible: !noTriggerToggle.value
         settingKey: "trigger"
         label: "Search Trigger"
-        description: "Example: 'obs' or 'ob'"
-        defaultValue: "obs"
+        description: "Example: '\\obs' or 'ob'"
+        defaultValue: "\obs"
     }
 }

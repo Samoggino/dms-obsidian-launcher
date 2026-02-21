@@ -76,7 +76,7 @@ QtObject {
 
             // Logic for the trigger:
             // If "Always Active" is enabled, the JSON will have "trigger": ""
-            const newTrigger = root.pluginService.loadPluginData("dankObsidian", "trigger", "obs");
+            const newTrigger = root.pluginService.loadPluginData("dankObsidian", "trigger", "\obs");
 
             root.enabled = isEnabled;
             root.isFlatpak = newIsFlatpak;

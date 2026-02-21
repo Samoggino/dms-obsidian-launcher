@@ -6,7 +6,7 @@
   "author": "Samoggino",
   "icon": "stylus_note",
   "type": "launcher",
-  "trigger": "ob",
+  "trigger": "\\obs",
   "requires_dms": ">=1.4.0",
   "license": "MIT",
   "component": "./DankObsidian.qml",
