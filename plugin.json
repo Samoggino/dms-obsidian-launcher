@@ -1,15 +1,15 @@
 {
   "id": "dankObsidian",
-  "name": "Obsidian Launcher",
+  "name": "Dank Obsidian",
   "description": "Quick access to your Obsidian vaults",
   "version": "1.0.0",
+  "license": "MIT",
   "author": "Samoggino",
   "icon": "stylus_note",
   "type": "launcher",
-  "trigger": "\\obs",
-  "requires_dms": ">=1.4.0",
-  "license": "MIT",
   "component": "./DankObsidian.qml",
   "settings" : "./DankObsidianSettings.qml",
-  "permissions": ["settings_read", "settings_write"]
+  "requires_dms": ">=1.4.0",
+  "permissions": ["settings_read", "settings_write"],
+  "trigger": "\\obs"
 }
