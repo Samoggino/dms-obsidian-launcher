@@ -1,6 +1,6 @@
 # Obsidian Launcher for DankMaterialShell
 
-A plugin for [Dank Material Shell](https://github.com/AvengeMedia/DankMaterialShell) that allows you to quickly open your Obsidian vaults.
+A plugin for [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell) that allows you to quickly open your Obsidian vaults.
 
 ![Screenshot](./screenshot.png)
 
@@ -32,11 +32,11 @@ I developed this plugin using LLMs like **Gemini** and **Qwen**, because I had n
 I designed this plugin with portability in mind:
 
 * It is compatible with both **native** and **Flatpak** versions of Obsidian (I tested both, but I primarily use the Flatpak version).
-* The code has been tested exclusively on CachyOS with Hyprland, but it should work on any Linux distribution that supports Flatpak or `xdg-open`.
+* The code has been tested exclusively on CachyOS with Hyprland, but it should work on any Linux distribution that supports Flatpak or `xdg-open`, and any compositor that supports Quickshell.
 
 ## Credits & License
 
-* Inspired by the [DMS VSCode Launcher](https://github.com/AvengeMedia/dms-plugin-registry) logic.
+* Inspired by the [DMS VSCode Launcher](https://github.com/sr-tream/dms-vscode-launcher) logic.
 * This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
-Developed with ❤️ by Samoggino on CachyOS.
+Developed with ❤️ by Samoggino on CachyOS, I hope this plugin to be useful for the Obsidian community and DMS users.
