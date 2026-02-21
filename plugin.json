@@ -7,6 +7,8 @@
   "icon": "stylus_note",
   "type": "launcher",
   "trigger": "ob",
+  "requires_dms": ">=1.4.0",
+  "license": "MIT",
   "component": "./DankObsidian.qml",
   "settings" : "./DankObsidianSettings.qml",
   "permissions": ["settings_read", "settings_write"]
