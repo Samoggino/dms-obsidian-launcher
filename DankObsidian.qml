@@ -17,6 +17,7 @@ QtObject {
     property bool enabled: true // Add this property
 
     property bool alwaysActive: false // New property
+    property var excludedPaths: [] //
 
     // Using the Process component as it is the officially supported one
     property var readProcess: Process {
@@ -68,6 +69,7 @@ QtObject {
             console.warn("DankObsidian Error: " + e);
         }
     }
+
     function updateSettings() {
         if (root.pluginService) {
             // Read values from JSON
@@ -81,8 +83,7 @@ QtObject {
             root.enabled = isEnabled;
             root.isFlatpak = newIsFlatpak;
             root.trigger = newTrigger;
-
-            console.log("DankObsidian Settings: Enabled =", root.enabled, "| Trigger =", root.trigger === "" ? "(Always Active)" : root.trigger);
+            root.excludedPaths = root.pluginService.loadPluginData("dankObsidian", "excludedPaths", []);
 
             if (!root.enabled) {
                 root.cachedVaults = [];
@@ -112,16 +113,25 @@ QtObject {
     }
 
     function getItems(query) {
-        if (!root.enabled)
-            return []; // If the plugin is disabled, return nothing
+       if (!root.enabled) return [];
 
         const q = query ? query.trim().toLowerCase() : "";
-        return root.cachedVaults.filter(v => q === "" || v.name.toLowerCase().includes(q)).map(v => ({
-                    name: v.name,
-                    icon: "obsidian",
-                    comment: v.path,
-                    action: "open:" + v.path
-                }));
+    
+        return root.cachedVaults
+            .filter(v => {
+                // Filtro 1: Corrispondenza con la query
+                const matchesQuery = q === "" || v.name.toLowerCase().includes(q);
+                // Filtro 2: Il path NON deve essere nella lista degli esclusi
+                const isNotExcluded = !root.excludedPaths.includes(v.path);
+                
+                return matchesQuery && isNotExcluded;
+            })
+            .map(v => ({
+                name: v.name,
+                icon: "obsidian",
+                comment: v.path,
+                action: "open:" + v.path
+            }));
     }
 
     function executeItem(item) {
